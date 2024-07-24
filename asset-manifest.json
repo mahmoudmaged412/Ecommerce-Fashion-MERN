@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/Ecommerce-Fashion-MERN/static/js/main.069c9e4f.js",
+    "static/media/shirt.jpg": "/Ecommerce-Fashion-MERN/static/media/shirt.42325446582e41f9f96a.jpg",
+    "static/media/woman.jpeg": "/Ecommerce-Fashion-MERN/static/media/woman.7b14cca7914ad9081839.jpeg",
+    "index.html": "/Ecommerce-Fashion-MERN/index.html",
+    "main.069c9e4f.js.map": "/Ecommerce-Fashion-MERN/static/js/main.069c9e4f.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.069c9e4f.js"
+  ]
+}
