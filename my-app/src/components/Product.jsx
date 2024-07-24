@@ -1,10 +1,9 @@
-import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import SearchIcon from '@mui/icons-material/Search';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import SearchIcon from "@mui/icons-material/Search";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
-
-import styled from "styled-components"
-
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Info = styled.div`
   opacity: 0;
@@ -33,7 +32,7 @@ const Container = styled.div`
   background-color: #f5fbfd;
   position: relative;
 
-  &:hover ${Info}{
+  &:hover ${Info} {
     opacity: 1;
   }
 `;
@@ -59,25 +58,25 @@ const Icon = styled.div`
   }
 `;
 
-
 const Product = ({ item }) => {
   return (
     <Container>
-    
       <Image src={item.img} />
       <Info>
         <Icon>
-          <ShoppingCartIcon/>
+          <ShoppingCartIcon />
         </Icon>
         <Icon>
-          <SearchIcon/>
+          <Link to={`/product/${item._id}`}>
+            <SearchIcon />
+          </Link>
         </Icon>
         <Icon>
-          <FavoriteBorderIcon/>
+          <FavoriteBorderIcon />
         </Icon>
       </Info>
     </Container>
   );
 };
 
-export default Product
+export default Product;

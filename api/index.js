@@ -9,6 +9,12 @@ const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
 dotenv.config();
 
+
+var cors = require('cors')
+
+app.use(cors())
+
+
 mongoose.connect(process.env.MONGO_URL)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("Failed to connect to MongoDB", err));
@@ -20,7 +26,6 @@ app.use("/api/users",userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
-
 
 
   app.listen(5000, ()=>{
